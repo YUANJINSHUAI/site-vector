@@ -1,19 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <title>arthuryuan website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Personal</h1>
-    <!-- <script src="index.js"></script> -->
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="left-side">
+                <div class="nav-link-wrapper">
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="nav-link-wrapper a">
+                    <a href="about.html">About</a>
+                </div>
+            </div>
+            <div class="right-sdie">
+                <div class="brand">
+                    <div>JS YUAN</div>
+                </div>
+            </div>
+        </div>
 
-    <p>
-        <!-- latitude: <span id = "lat"></span> </bar>
-        longtitude: <span id = "lon"></span> </bar> -->
-        return: <span id = "res"></span> </bar>
-    </p>
-    <script src="sketch.js"></script>
+        <div class="content-wrapper">
+            <div class="portfolio-items-wrapper">
+                
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/portfolio/portfolio1.jpg)"></div>
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <!-- <img src="images/logos/quip.jpg" /> -->
+                        </div>
+                        <div class="subtitle"> I bulit the Quip Ecommerce platform </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/portfolio/portfolio2.jpg)"></div>
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <!-- <img src="images/logos/quip.jpg" /> -->
+                        </div>
+                        <div class="subtitle"> I bulit My frist projects </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/portfolio/portfolio3.jpg)"></div>
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <!-- <img src="images/logos/quip.jpg" /> -->
+                        </div>
+                        <div class="subtitle"> I bulit My second projects </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </body>
+<script>
+    const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
+    portfolioItems.forEach(portfolioItem => {
+        console.log('got it');
+        portfolioItem.addEventListener('mouserover', () => {
+            console.log(portfolioItem);
+            // console.log(portfolioItem.childNodes[1].classList);
+            // portfolioItem.childNodes[1].classList.add('img-draken');
+        })
+
+        // portfolioItem.addEventListener('mouserout', () => {
+        //     console.log(portfolioItem.childNodes[1].classList);
+        //     portfolioItem.childNodes[1].classList.remove('img-draken');
+        // })
+    })
+</script>
 </html>
